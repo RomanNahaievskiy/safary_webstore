@@ -38,27 +38,106 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #f5f5f5;
+    @media (max-width: 768.98px) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     // .header__container
 
     &__container {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         column-gap: 40px; // for safety
+        /* Від 1200px і менше */
+        @media (max-width: 1200px) {
+            /* Ваші стилі для ширини екрану від 1200px до 901px */
+        }
+
+        /* Від 900px і менше */
+        @media (max-width: 900px) {
+            /* Ваші стилі для ширини екрану від 900px до 601px */
+            max-width: 870px;
+            padding: 0 15px;
+        }
+
+        /* Від 768.98px і менше */
+        @media (max-width: 768.98px) {
+            /* Ваші стилі для ширини екрану від 768.98px до 400px */
+            max-width: 740px;
+            padding: 0 10px;
+        }
+
+        /* Від 400px і менше */
+        @media (max-width: 450px) {
+            /* Ваші стилі для ширини екрану від 400px до 321px */
+            grid-template-columns: auto auto;
+            row-gap: 10px;
+            padding: 0 8px;
+        }
+
+        /* Від 320px і менше */
+        @media (max-width: 320px) {
+            /* Ваші стилі для ширини екрану від 320px і менше */
+            padding: 0 5px;
+        }
     }
 
     // .header__menu
 
     &__menu {
+        @media (max-width: 768.98px) {
+            grid-row-start: 1;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            justify-self: self-end;
+        }
+        @media (max-width: 450px) {
+            /* Ваші стилі для ширини екрану від 400px до 321px */
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
     }
 
     // .header__logo
 
     &__logo {
+        @media (max-width: 768.98px) {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            justify-self: self-start;
+            align-self: center;
+        }
+        @media (max-width: 450px) {
+            /* Ваші стилі для ширини екрану від 400px до 321px */
+            grid-row-start: 1;
+            grid-column-start: span 2;
+            grid-column-end: 3;
+            justify-self: center;
+            // align-self: center;
+        }
     }
 
     // .header__actions
 
     &__actions {
+        @media (min-width: 768.98px) {
+            justify-self: end;
+        }
+        @media (max-width: 768.98px) {
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        @media (max-width: 450px) {
+            /* Ваші стилі для ширини екрану від 400px до 321px */
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            align-self: center;
+            justify-self: center;
+        }
     }
 }
 .menu {
@@ -67,14 +146,54 @@ body {
     // .menu__icon
 
     &__icon {
+        /* Від 768.98px і менше */
+        @media (max-width: 768.98px) {
+            display: block;
+            transition: all 0.3s ease 0s;
+        }
     }
-
+    &._active &__icon {
+        span {
+            width: 80%;
+            &::before,
+            &::after {
+                transition: all 0.3s ease 0s;
+                width: 45%;
+            }
+            &::before {
+                left: 10%;
+            }
+            &::after {
+                left: 45%;
+            }
+        }
+    }
     // .menu__body
 
     &__body {
         width: 100%;
+        @media (max-width: 768.98px) {
+            /* Ваші стилі для ширини екрану від 768.98px до 400px */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            transition: all 0.3s ease 0s;
+        }
     }
-
+    // коли у батьківського елемента доданий клас _active
+    &._active &__body {
+        @media (max-width: 768.98px) {
+            /* Ваші стилі для ширини екрану від 768.98px до 400px */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+    }
     // .menu__list
 
     &__list {
@@ -83,11 +202,22 @@ body {
         column-gap: 30px;
         row-gap: 10px; /* 60/16 */
         justify-content: flex-start;
+        /* Від 768.98px і менше */
+        @media (max-width: 768.98px) {
+            /* Ваші стилі для ширини екрану від 768.98px до 400px */
+            flex-direction: column;
+            align-items: center;
+            padding-top: 120px;
+            row-gap: 40px;
+        }
     }
 
     // .menu__item
 
     &__item {
+        @media (max-width: 768.98px) {
+            font-size: 2em;
+        }
     }
 
     // .menu__link
@@ -112,6 +242,9 @@ body {
             background-color: transparent;
             transition: all 0.3s ease 0s;
         }
+        &:active {
+            color: $aColor;
+        }
         @media (any-hover: hover) {
             &:hover {
                 color: $aColor;
@@ -128,15 +261,60 @@ body {
                 }
             }
         }
+        @media (max-width: 768.98px) {
+            font-size: inherit;
+        }
     }
 }
+
 .icon-menu {
+    @media (min-width: 768.98px) {
+        display: none;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $aColor;
+    border-radius: 4px;
+    width: 45px;
+    height: 45px;
+    span {
+        display: block;
+        position: relative;
+        background-color: $aColor;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        &::before,
+        &::after {
+            transition: left 0.3s ease 0s;
+            content: "";
+            display: block;
+            background-color: $aColor;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 2px;
+            left: 0;
+        }
+        &::before {
+            top: -9px;
+        }
+        &::after {
+            bottom: -9px;
+        }
+    }
+    @media (max-width: 450px) {
+        height: 30px;
+        width: 30px;
+    }
 }
 .actions {
-    justify-self: end;
     display: flex;
     align-items: center;
     column-gap: 40px;
+
     // .actions__search
 
     &__search {
@@ -158,6 +336,15 @@ body {
     // .actions__item
 
     &__item {
+        cursor: pointer;
+        &:active {
+            transform: scale(1.1);
+            transition: all 0.3s ease 0s;
+            .actions__icon > path {
+                fill: $aColor;
+                transition: all 0.3s ease 0s;
+            }
+        }
         @media (any-hover: hover) {
             &:hover {
                 .actions__icon {
@@ -240,6 +427,9 @@ body {
                 transition: background-color 0s ease 0s;
             }
         }
+        @media (max-width: 768.98px) {
+            width: 80%;
+        }
     }
     // .search__input
     &__input {
@@ -253,9 +443,14 @@ body {
             letter-spacing: 0.2px;
             background-color: transparent;
         }
+        @media (max-width: 768.98px) {
+            width: 80%;
+        }
     }
 
     &__button {
+        padding-left: 5px;
+        background-color: transparent;
         @media (any-hover: hover) {
             &:hover {
                 .actions__icon {
