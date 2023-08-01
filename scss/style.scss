@@ -154,6 +154,7 @@ body {
     }
     &._active &__icon {
         span {
+            height: 2px;
             width: 80%;
             &::before,
             &::after {

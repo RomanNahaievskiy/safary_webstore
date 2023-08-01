@@ -242,6 +242,7 @@ body {
   }
 }
 .menu._active .menu__icon span {
+  height: 2px;
   width: 80%;
 }
 .menu._active .menu__icon span::before, .menu._active .menu__icon span::after {
