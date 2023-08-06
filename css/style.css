@@ -435,6 +435,7 @@ body {
 }
 .actions__item {
   cursor: pointer;
+  user-select: none;
 }
 .actions__item:active {
   transform: scale(1.1);
