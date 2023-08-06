@@ -187,6 +187,9 @@ body {
     grid-column-end: 3;
   }
 }
+.header__logo {
+  z-index: 2;
+}
 @media (max-width: 768.98px) {
   .header__logo {
     grid-row-start: 1;
@@ -231,6 +234,17 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  z-index: 2;
+}
+.menu::before, .menu::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  z-index: 0;
 }
 .menu__icon {
   /* Від 768.98px і менше */
@@ -238,6 +252,7 @@ body {
 @media (max-width: 768.98px) {
   .menu__icon {
     display: block;
+    z-index: 1;
     transition: all 0.3s ease 0s;
   }
 }
@@ -257,13 +272,15 @@ body {
 }
 .menu__body {
   width: 100%;
+  z-index: 1;
 }
 @media (max-width: 768.98px) {
   .menu__body {
+    z-index: 0;
     /* Ваші стилі для ширини екрану від 768.98px до 400px */
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: -100%;
     transition: all 0.3s ease 0s;
@@ -274,9 +291,11 @@ body {
     /* Ваші стилі для ширини екрану від 768.98px до 400px */
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
+    background-color: #ed165f;
+    overflow: scroll;
     transition: all 0.3s ease 0s;
   }
 }
@@ -400,6 +419,7 @@ body {
   align-items: center;
   -moz-column-gap: 40px;
        column-gap: 40px;
+  z-index: 2;
 }
 .actions__search {
   display: flex;

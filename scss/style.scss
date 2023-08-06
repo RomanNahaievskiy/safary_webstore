@@ -102,6 +102,7 @@ body {
     // .header__logo
 
     &__logo {
+        z-index: 2;
         @media (max-width: 768.98px) {
             grid-row-start: 1;
             grid-column-start: 1;
@@ -143,12 +144,25 @@ body {
 .menu {
     display: flex;
     align-items: center;
+    &::before,
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f5f5f5;
+        z-index: 0;
+    }
+    z-index: 2;
     // .menu__icon
 
     &__icon {
         /* Від 768.98px і менше */
         @media (max-width: 768.98px) {
             display: block;
+            z-index: 1;
             transition: all 0.3s ease 0s;
         }
     }
@@ -173,11 +187,13 @@ body {
 
     &__body {
         width: 100%;
+        z-index: 1;
         @media (max-width: 768.98px) {
+            z-index: 0;
             /* Ваші стилі для ширини екрану від 768.98px до 400px */
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             top: 0;
             left: -100%;
             transition: all 0.3s ease 0s;
@@ -189,9 +205,11 @@ body {
             /* Ваші стилі для ширини екрану від 768.98px до 400px */
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             top: 0;
             left: 0;
+            background-color: $aColor;
+            overflow: scroll;
             transition: all 0.3s ease 0s;
         }
     }
@@ -315,6 +333,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 40px;
+    z-index: 2;
 
     // .actions__search
 
