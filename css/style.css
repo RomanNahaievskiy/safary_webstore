@@ -304,7 +304,7 @@ body {
   flex-wrap: wrap;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  row-gap: 10px; /* 60/16 */
+  row-gap: 15px; /* 60/16 */
   justify-content: flex-start;
   /* Від 768.98px і менше */
 }
@@ -435,7 +435,6 @@ body {
 }
 .actions__item {
   cursor: pointer;
-  user-select: none;
 }
 .actions__item:active {
   transform: scale(1.1);
