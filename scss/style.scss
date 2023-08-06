@@ -102,6 +102,7 @@ body {
     // .header__logo
 
     &__logo {
+        user-select: none;
         z-index: 2;
         @media (max-width: 768.98px) {
             grid-row-start: 1;
@@ -144,6 +145,7 @@ body {
 .menu {
     display: flex;
     align-items: center;
+    user-select: none;
     &::before,
     &::after {
         content: "";

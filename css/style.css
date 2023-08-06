@@ -188,6 +188,9 @@ body {
   }
 }
 .header__logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 2;
 }
 @media (max-width: 768.98px) {
@@ -234,6 +237,9 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 2;
 }
 .menu::before, .menu::after {
