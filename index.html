@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title>Safary Webstore</title>
 </head>
 
@@ -27,7 +30,7 @@
                 </div>
                 <a href="#" class="header__logo"><img src="img/logo/logo.svg" alt="Logo"></a>
                 <div class="header__actions actions">
-                    <label for="search" class="actions__search search">
+                    <div class="actions__search search">
                         <div class="search__input-line"><input id="search" autocomplete="off" type="text" name="form[]"
                                 data-error="Помилка" placeholder="Search..." class="search__input"></div>
                         <button type="button" class="search__button"><svg class="actions__icon" width="16" height="16"
@@ -36,7 +39,7 @@
                                     d="M5.94286 0C7.519 0 9.03059 0.62612 10.1451 1.74062C11.2596 2.85512 11.8857 4.36671 11.8857 5.94286C11.8857 7.41486 11.3463 8.768 10.4594 9.81029L10.7063 10.0571H11.4286L16 14.6286L14.6286 16L10.0571 11.4286V10.7063L9.81029 10.4594C8.73193 11.3799 7.36065 11.8856 5.94286 11.8857C4.36671 11.8857 2.85512 11.2596 1.74062 10.1451C0.62612 9.03059 0 7.519 0 5.94286C0 4.36671 0.62612 2.85512 1.74062 1.74062C2.85512 0.62612 4.36671 0 5.94286 0V0ZM5.94286 1.82857C3.65714 1.82857 1.82857 3.65714 1.82857 5.94286C1.82857 8.22857 3.65714 10.0571 5.94286 10.0571C8.22857 10.0571 10.0571 8.22857 10.0571 5.94286C10.0571 3.65714 8.22857 1.82857 5.94286 1.82857Z"
                                     fill="black" />
                             </svg></button>
-                    </label>
+                    </div>
                     <ul class="actions__list">
                         <li class="actions__item"><a href="#" class="actions__user-profile"><svg class="actions__icon"
                                     width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -69,9 +72,14 @@
         <section class="fullscreen">
 
             <div class="fullscreen__container">
-                <div class="fullscreen__background-image">
-                    <img class="fullscreen__background-image-item" src="img/logo/big_stroke_logo/Logo.png" alt="logo">
+
+                <div class="fullscreen__background">
+                    <div class="fullscreen__background-image">
+                        <img class="fullscreen__background-image-item" src="img/logo/big_stroke_logo/Logo.png"
+                            alt="logo">
+                    </div>
                 </div>
+
 
                 <!-- Оболонка слайдера -->
                 <div class="fullscreen__slider swiper">
@@ -82,23 +90,390 @@
                             <div class="swiper-slide__image-cnt">
                                 <img class="swiper-slide__image-item" src="img/fullscreen/01.png" alt="image">
                             </div>
-
+                        </div>
+                        <div class="fullscreen__slide swiper-slide">
+                            <div class="swiper-slide__image-cnt">
+                                <img class="swiper-slide__image-item" src="img/fullscreen/01.png" alt="image">
+                            </div>
+                        </div>
+                        <div class="fullscreen__slide swiper-slide">
+                            <div class="swiper-slide__image-cnt">
+                                <img class="swiper-slide__image-item" src="img/fullscreen/01.png" alt="image">
+                            </div>
                         </div>
                     </div>
                     <!-- Якщо потрібна пагінація -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination">
+
+                    </div>
 
                 </div>
                 <!-- Оболонка слайдера -->
-                <a href="#" class="fullscreen__link">Explore our collectoin <img src="img/fullscreen/icon/downarr.svg"
-                        alt="icon"></a>
+                <a href="#getlook" class="fullscreen__link">Explore our collectoin <img
+                        src="img/fullscreen/icon/downarr.svg" alt="icon"></a>
             </div>
         </section>
         <!-- /fullscreen-block-->
-        <main class="page"></main>
-        <footer class="footer">I am footer</footer>
+        <main class="page" id="getlook">
+            <section class="main-header">
+                <h2 class="main-header__title">Shop your style</h2>
+                <div class="main-header__container">
+                    <p class="main-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae gravida
+                        cursus adipiscing
+                        viverra at tortor, egestas odio parturient. Morbi ut lorem in erat. Et et molestie diam diam
+                        ultricies.
+                        Scelerisque duis diam ac cras dictum adipiscing. Venenatis at sit proin ut vitae adipiscing id
+                        facilisis.</p>
+                </div>
+
+            </section>
+            <section class="showcase">
+                <div class="showcase__container">
+
+                    <div class="showcase__body-grid">
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/01.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Multicolored armless top</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/02.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Grey bee wrist-watch</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/03.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Mini skirt</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/04.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Red lightweight gown</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/05.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Blue botton-down gown</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/06.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Moon and star neckpiece</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/07.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Tambourine Crossbody Bag </div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/08.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Katy Perry Killer Queen EDP</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/09.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">High heels ladies shoes</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/10.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Nerdy oval glasses</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/11.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Diamond ladies ring</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/12.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Ladies bush pants </div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/13.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Guilhermina Embellished Slides</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card --><!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/14.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Superga Plaid Sneakers</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/15.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Checked ladies trouser</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                        <!-- card -->
+                        <div class="showcase__item card">
+                            <div class="card__pic"><img src="img/showcase/16.jpg" alt="image">
+                                <div class="card__action action-card">
+                                    <ul class="action-card__list">
+                                        <li class="action-card__item"><a href="#"><span></span></a></li>
+                                        <li class="action-card__item"><button type="button"><span>Add to
+                                                    Cart</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__caption caption-card">
+                                <div class="caption-card__title">Beanie winter fleece</div>
+                                <div class="caption-card__price"><span>10,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                    </div>
+                </div>
+                <div class="showcase__pagination">
+                    <div class="showcase__arr showcase__arr_back"></div>
+                    <ul class="showcase__list">
+                        <li class="showcase__pagination-item showcase__pagination-item_active ">1</li>
+                        <li class="showcase__pagination-item">2</li>
+                        <li class="showcase__pagination-item">3</li>
+                    </ul>
+                    <div class="showcase__arr showcase__arr_forvard"></div>
+                </div>
+    </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- logo -->
+            <a href="#" class="footer__item logo"><img src="img/logo/logo.svg" alt="logotype"></a>
+            <!-- nav -->
+            <ul class="footer__item nav-footer">
+                <li class="nav-footer__item"><a href="#" class="nav-footer__link">About Us</a></li>
+                <li class="nav-footer__item"><a href="#" class="nav-footer__link">Contact</a></li>
+                <li class="nav-footer__item"><a href="#" class="nav-footer__link">Terms & Conditions</a></li>
+            </ul>
+            <!-- social -->
+            <ul class="footer__item social">
+                <li class="social__item"><a href="#" class="social__link social__link_fb">Facebook</a></li>
+                <li class="social__item"><a href="#" class="social__link social__link_tw">Twitter</a></li>
+                <li class="social__item"><a href="#" class="social__link social__link_inst">Instagram</a></li>
+            </ul>
+            <!-- form -->
+            <form class="footer__item form">
+                <label class="form__label" for="email">
+                    Subscribe to our newsletter
+                </label>
+                <div class="form__row">
+                    <input id="footer-email-input" type="email" name="email" autocomplete="off"
+                        placeholder="Email Address">
+                    <button type="submit">OK</button>
+                </div>
+            </form>
+            <!-- address -->
+            <address class="footer__item address">
+                <p class="address__item">497 Evergreen Rd. Rosevile. CA 95673</p>
+                <a class="address__item" href="tel:+44345678903">+44345678903</a>
+                <a class="address__item" href="mailto:adobexd@mail.com">adobexd@mail.com</a>
+            </address>
+        </div>
+
+    </footer>
     </div>
     <script src="js/menu.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>
