@@ -1103,17 +1103,17 @@ body {
         }
         &_fb {
             &:before {
-                background: url("/img/footer/facebook.png") center no-repeat;
+                background: url("../img/footer/facebook.png") center no-repeat;
             }
         }
         &_tw {
             &:before {
-                background: url("/img/footer/twitter.png") center no-repeat;
+                background: url("../img/footer/twitter.png") center no-repeat;
             }
         }
         &_inst {
             &:before {
-                background: url("/img/footer/instagram.png") center no-repeat;
+                background: url("../img/footer/instagram.png") center no-repeat;
             }
         }
         @media (max-width: 768px) {
